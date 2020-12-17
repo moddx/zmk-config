@@ -41,7 +41,7 @@
             >;
         };
 
-        first_layer {
+        lower_layer {
           bindings = <
     &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
     &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
@@ -50,7 +50,7 @@
           >;
         };
         
-        second_layer {
+        raise_layer {
           bindings = <
     &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
     &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
@@ -59,31 +59,31 @@
           >;
         };
         
-        third_layer {
-          bindings = <
-    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-          >;
-        };
-        
-        fourth_layer {
-          bindings = <
-    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-          >;
-        };
-        
-        num_layer {
-          bindings = <
-    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-          >;
-        };
+//        third_layer {
+//          bindings = <
+//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
+//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
+//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
+//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
+//          >;
+//        };
+//        
+//        fourth_layer {
+//          bindings = <
+//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
+//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
+//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
+//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
+//          >;
+//        };
+//        
+//        num_layer {
+//          bindings = <
+//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
+//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
+//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
+//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
+//          >;
+//        };
     };
 };
