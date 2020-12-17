@@ -41,7 +41,7 @@
             >;
         };
 
-        layer_one {
+        first_layer {
           bindings = <
     &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
     &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
