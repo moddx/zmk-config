@@ -44,7 +44,7 @@
         lower_layer {
           bindings = <
     &kp TAB   &kp ESC     &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp NUM_0 &kp POS1    &kp END   &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
+    &kp LALT  &kp U       &kp I       &kp NUM_0 &kp HOME    &kp END   &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
     &kp LSHFT &kp LC(Y)   &kp LC(X)   &kp LC(C) &kp LC(V)   &kp NUM_0 &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
     &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp NUM_1   &kp NUM_1   &kp Q             &kp RSHFT
           >;
