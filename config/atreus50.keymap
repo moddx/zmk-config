@@ -58,6 +58,34 @@
     &mo L5 &kp LC(PG_UP) &kp LC(PG_DN) &kp LGUI &kp CAPS    &mo L3    &none   &none     &none      &none     &none   	 &none        &kb LC(LA(DEL))   &kp RSHFT
           >;
         };
+
+        trd_layer {
+          bindings = <
+    &kp GRAVE     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none   &none  &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
+    &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &none   &none  &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
+    &kp LSHFT     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &none   &none  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+    &mo LSHFT     &kp F12    &none      &kp LGUI   &none      &kp LCTRL  &kp LALT &none &none      &none     &none   	 &none      &none       &kp RSHFT
+          >;
+        };
+        
+	fourth_layer {
+	// todo mses
+          bindings = <
+    &kp GRAVE     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none   &none  &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
+    &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &none   &none  &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
+    &kp LSHFT     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &none   &none  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+    &mo LSHFT     &kp F12    &none      &kp LGUI   &none      &kp LCTRL  &kp LALT &none &none      &none     &none   	 &none      &none       &kp RSHFT
+          >;
+        };
+
+	fifth_layer {
+          bindings = <
+    &kp KP_NUM    &none      &kp LALT   &kp LSHFT  &kp CTRL  &none       &none   &none  &kp RS(N7)   &kp N7  &kp N8  &kp N9  &kp SLASH   &kp BSPC
+    &none         &none      &none      &none      &none     &none       &none   &none  &kp LS(RBKT) &kp N4  &kp N5  &kp N6  &kp RBKT    &none
+    &none         &none      &none      &none      &none     &none       &none   &none  &kp BSPC     &kp N1  &kp N2  &kp N3  &none       &none
+    &none         &none      &none      &kp LGUI   &none     &none       &mo L1  &kp N0 &kp DOT      &kp COMMA  &kp DOT  &kp DOT  &none  &kp RSHFT
+          >;
+        };
         
     };
 };
