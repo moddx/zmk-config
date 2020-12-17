@@ -41,49 +41,23 @@
             >;
         };
 
-        lower_layer {
+        fst_layer {
           bindings = <
-    &kp TAB   &kp ESC     &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp NUM_0 &kp HOME    &kp END   &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-    &kp LSHFT &kp LC(Y)   &kp LC(X)   &kp LC(C) &kp LC(V)   &kp NUM_0 &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp NUM_1   &kp NUM_1   &kp Q             &kp RSHFT
+    &kp TAB   &kp ESC     &none       &kp ENTER &none       &kp INS   &none   &none     &none       &none     &kp RA(N7) &kp RA(N0)  &kp K_PLAY_PAUSE  &kp K_NEXT
+    &kp LCTRL &none       &kp INS     &kp LC(S) &kp HOME    &kp END   &none   &none     &kp LEFT    &kp DOWN  &kp UP     &kp RIGHT   &kp LS(N8)        &kp LS(N9)
+    &kp LSHFT &kp LC(Y)   &kp LC(X)   &kp LC(C) &kp LC(V)   &tog L4   &none   &none     &kp DEL     &kp BSPC  &kp RA(8)  &kp RA(9)   &kp RS(BSLH)      &kp K_PREV
+    &mo L5 &kp LC(PG_UP) &kp LC(PG_DN) &kp LGUI &none       &none     &none   &kp LALT  &mo L3      &none     &none   	 &none       &none             &kp RSHFT
           >;
         };
         
-        raise_layer {
+	snd_layer {
           bindings = <
-    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp NUM_1   &kp NUM_1   &kp Q             &kp RSHFT
+    &none     &none   	 &kp RA(MINUS) &kp LS(N0) &kp LS(N6) &kp RA(RBKT)    &none     &none      &none     &kp LS(F3)  &kp RS(RBKT) &kp F3  &kp RBKT  &none
+    &kp LCTRL &kp RA(Q)  &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp SLASH  &kp RA(NON_US_BSLH)    &none     &none      &kp HOME  &kp PG_DN   &kp PG_UP    &kp END &none     &none
+    &kp LSHFT &kp K_APP  &none         &kp LS(N7) &kp LS(N5) &kp LS(N1)      &none     &none      &none     &none       &none        &kp LS(F10)  &kp LC(F2)        &none
+    &mo L5 &kp LC(PG_UP) &kp LC(PG_DN) &kp LGUI &kp CAPS    &mo L3    &none   &none     &none      &none     &none   	 &none        &kb LC(LA(DEL))   &kp RSHFT
           >;
         };
         
-//        third_layer {
-//          bindings = <
-//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-//          >;
-//        };
-//        
-//        fourth_layer {
-//          bindings = <
-//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-//          >;
-//        };
-//        
-//        num_layer {
-//          bindings = <
-//    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &none   &none     &kp Y       &kp U     &kp LBRC    &kp RBRC    &kp K_PLAY_PAUSE  &kp K_NEXT
-//    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &none   &none     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT   &kp LPAR          &kp RPAR
-//    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &none   &none     &kp DEL     &kp BSPC  &kp LBKT    &kp RBKT    &kp NUM_0         &kp K_PREV
-//    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &none   &kp LALT  &kp NUM_0   &kp UP    &kp         &kp NUM_1   &kp Q             &kp RSHFT
-//          >;
-//        };
     };
 };
