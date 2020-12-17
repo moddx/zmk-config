@@ -37,7 +37,7 @@
     &kp TAB   &kp X     &kp V     &kp L     &kp C     &kp W     &none   &none     &kp K     &kp H     &kp G     &kp F     &kp Q   		&kp MINUS
     &kp LALT  &kp U     &kp I     &kp A     &kp E     &kp O     &none   &none     &kp S     &kp N     &kp R     &kp T     &kp D   		&kp Y
     &kp LSHFT &kp LBRC  &kp SEMI  &kp APOS  &kp P     &kp Y     &none   &none     &kp B     &kp M     &kp COMMA &kp DOT   &kp J   		&kp NON_US_BSLH
-    &mo L5    &kp LS(NON_US_HASH) &kp NUM_0 &kp LGUI  &kp NUM_0 &kp LCTRL &mo L1  &kp SPACE &mo L2    &kp L3    &kp NUM_1 &kp RALT  &kp LC(LA(LS(Q)))  	&kp RSHFT
+    &mo L5    &kp LS(NON_US_HASH) &kp NUM_0 &kp LGUI  &kp NUM_0 &kp LCTRL &mo L1  &kp SPACE &mo L2  &kp L3  &none  &kp RALT  &kp LC(LA(LS(Q)))  &kp RSHFT
             >;
         };
 
@@ -64,17 +64,17 @@
     &kp GRAVE     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none   &none  &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
     &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &none   &none  &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
     &kp LSHFT     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &none   &none  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
-    &mo LSHFT     &kp F12    &none      &kp LGUI   &none      &kp LCTRL  &kp LALT &none &none      &none     &none   	 &none      &none       &kp RSHFT
+    &kp LSHFT     &kp F12    &none      &kp LGUI   &none      &kp LCTRL  &kp LALT &none &none      &none     &none   	 &none      &none       &kp RSHFT
           >;
         };
         
 	fourth_layer {
 	// todo mses
           bindings = <
-    &kp GRAVE     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none   &none  &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
-    &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &none   &none  &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
-    &kp LSHFT     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &none   &none  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
-    &mo LSHFT     &kp F12    &none      &kp LGUI   &none      &kp LCTRL  &kp LALT &none &none      &none     &none   	 &none      &none       &kp RSHFT
+    &kp TAB    &kp PG_UP     &none      &kp UP     &none     &kp DEL    &none      &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
+    &kp LCTRL  &kp PG_DN     &kp LEFT   &kp DOWN   &kp RIGHT &kp BSPC   &none      &none     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
+    &kp LSHFT  &kp LC(Y)     &kp LC(X)  &kp LC(C)  &kp LC(V) &tog L4    &none      &none     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+    &mo L5     &kp ENTER     &none      &kp LGUI   &kp LCTRL &kp LALT   &mo L1     &kp SPACE &mo L2     &mo L3     &none      &none      &reset       &bootloader
           >;
         };
 
