@@ -68,8 +68,6 @@
           >;
         };
  
-	    &kp ((((0x07) << 16) | (0x2B))) &kp (((((0x07) << 16) | (0x4B)))) &none &kp (((((0x07) << 16) | (0x52)))) &none &kp (((((0x07) << 16) | (0x4C)))) &none &none &none &none &none &((((0x07) << 16) | (0x47))) &(((((0x07) << 16) | (0x46)))) &none
-
         fourth_layer {
           bindings = <
     &kp TAB    &kp PG_UP     &none      &kp UP     &none     &kp DEL    &none      &none     &none      &none      &none      &kp SCROLLLOCK  &kp PSCRN   &none
