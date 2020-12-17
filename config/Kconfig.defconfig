@@ -1,5 +1,0 @@
-#Copyright (c) 2020 Matthias Ervens
-#SPDX-License-Identifier: MIT
-
-config ZMK_KEYBOARD_NAME
-  default "Atreus50"
