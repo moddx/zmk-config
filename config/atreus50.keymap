@@ -34,10 +34,10 @@
 
         default_layer {
             bindings = <
-    &kp TAB   &kp X     &kp V     &kp L     &kp C     &kp W     &none   &none     &kp K     &kp H     &kp G     &kp F     &kp Q   &kp NUM_0
-    &kp LALT  &kp U     &kp I     &kp A     &kp E     &kp O     &none   &none     &kp S     &kp N     &kp R     &kp T     &kp D   &kp Y
-    &kp LSHFT &kp U     &kp O     &kp A     &kp P     &kp Z     &none   &none     &kp B     &kp M     &kp COMMA &kp DOT   &kp J   &kp NUM_4
-    &mo L5    &kp NUM_0 &kp NUM_0 &kp LGUI  &kp LCTRL &kp NUM_1 &mo L1  &kp SPACE &mo L2    &kp NUM_0 &kp NUM_0 &kp NUM_1 &kp Q   &kp RSHFT
+    &kp TAB   &kp X     &kp V     &kp L     &kp C     &kp W     &none   &none     &kp K     &kp H     &kp G     &kp F     &kp Q   		&kp MINUS
+    &kp LALT  &kp U     &kp I     &kp A     &kp E     &kp O     &none   &none     &kp S     &kp N     &kp R     &kp T     &kp D   		&kp Y
+    &kp LSHFT &kp LBRC  &kp SEMI  &kp APOS  &kp P     &kp Y     &none   &none     &kp B     &kp M     &kp COMMA &kp DOT   &kp J   		&kp NON_US_BSLH
+    &mo L5    &kp LS(NON_US_HASH) &kp NUM_0 &kp LGUI  &kp NUM_0 &kp LCTRL &mo L1  &kp SPACE &mo L2    &kp L3    &kp NUM_1 &kp RALT  &kp LC(LA(LS(Q)))  	&kp RSHFT
             >;
         };
 
