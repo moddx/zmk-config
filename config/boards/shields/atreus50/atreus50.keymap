@@ -9,12 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define LOWER 1
-#define RAISE 2
+#define L1 1
+#define L2 2
+#define L3 3  // NUMBERs, F1-12..
+#define L4 4  // SPECIAL
+#define L5 5  // NUMPAD
 
 / {
     behaviors {
-        hm: homerow_mods {
+        kp: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
@@ -31,11 +34,20 @@
 
         default_layer {
             bindings = <
-    &kp TAB   &kp Q       &kp W       &kp E       &kp R       &kp T     &trans  &trans  &kp Y     &kp U       &kp I        &kp O        &kp P         &kp BSPC
-    &kp LALT  &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G     &trans  &trans  &kp H     &hm RSHFT J &hm RCTRL K  &hm RALT L   &hm RGUI SEMI &kp RET
-    &kp LSHFT &kp Z       &kp X       &kp C       &kp V       &kp B     &trans  &trans  &kp N     &kp M       &kp COMMA    &kp DOT      &kp FSLH      &kp SQT
-    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC    &kp SPACE   &kp LEFT  &kp A   &kp B   &kp DOWN  &kp UP      &kp RIGHT    &kp NUM_1        &kp NUM_2         &kp NUM_3
+    &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &trans  &trans  &kp Y     &kp U     &kp I     &kp O     &kp P   &kp BSPC
+    &kp LALT  &kp U     &kp I     &kp A     &kp E     &kp O     &trans  &trans  &kp S     &kp N     &kp R     &kp T     &kp D   &kp Y
+    &kp LSHFT &kp U     &kp O     &kp A     &kp P     &kp Z     &trans  &trans  &kp B     &kp M     &kp COMMA &kp DOT   &kp J   &kp NUM_4
+    &mo L5 &kp NUM_0 &kp NUM_0 &kp LGUI  &kp LCTRL &kp NUM_1 &mo L1   &kp SPACE   &mo L2 &kp NUM_0 &kp NUM_0 &kp NUM_1 &kp Q   &kp RSHFT
             >;
+        };
+
+        l1 {
+          bindings = <
+    &kp TAB   &kp Q       &kp W       &kp E     &kp R       &kp T     &trans  &trans  &kp Y     &kp U     &kp I       &kp O       &kp P     &kp BSPC
+    &kp LALT  &kp U       &kp I       &kp A     &kp E       &kp O     &trans  &trans  &kp S     &kp N     &kp R       &kp T       &kp D     &kp Y
+    &kp LSHFT &kp U       &kp O       &kp A     &kp P       &kp Z     &trans  &trans  &kp B     &kp M     &kp COMMA   &kp DOT     &kp J     &kp NUM_4
+    &kp LCTRL &kp LALT    &kp LGUI    &kp BSPC  &kp SPACE   &kp LEFT  &trans  &kp B   &kp DOWN  &kp UP    &kp         &kp NUM_1   &kp Q     &kp RSHFT
+          >;
         };
     };
 };
