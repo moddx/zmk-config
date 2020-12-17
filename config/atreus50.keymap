@@ -70,10 +70,10 @@
  
         fourth_layer {
           bindings = <
-    &kp TAB    &kp PG_UP     &none      &kp UP     &none     &kp DEL    &none      &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp EQUAL
-    &kp LCTRL  &kp PG_DN     &kp LEFT   &kp DOWN   &kp RIGHT &kp BSPC   &none      &none     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  &kp LS(EQUAL)
-    &kp LSHFT  &kp LC(Y)     &kp LC(X)  &kp LC(C)  &kp LC(V) &tog L4    &none      &none     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
-    &mo L5     &kp ENTER     &none      &kp LGUI   &kp LCTRL &kp LALT   &mo L1     &kp SPACE &mo L2     &mo L3     &none      &none      &reset      &bootloader
+    &kp TAB    &kp PG_UP     &none      &kp UP     &none     &kp DEL    &none      &none     &none      &none      &none      &SCROLLLOCK  &PSCRN      &none     
+    &kp LCTRL  &kp PG_DN     &kp LEFT   &kp DOWN   &kp RIGHT &kp BSPC   &none      &none     &none      &none      &none      &none        &none       &none
+    &kp LSHFT  &kp LC(Y)     &kp LC(X)  &kp LC(C)  &kp LC(V) &tog L4    &none      &none     &none      &none      &none      &none        &none       &none     
+    &mo L5     &kp ENTER     &none      &kp LGUI   &kp LCTRL &kp LALT   &mo L1     &kp SPACE &mo L2     &mo L3     &none      &none        &reset      &bootloader
           >;
         };
 
