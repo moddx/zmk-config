@@ -36,10 +36,10 @@
 
         default_layer {
             bindings = <
-    &kp TAB    &kp X                &kp V      &kp L     &kp C      &kp W      &none       &none      &kp K   &kp H   &kp G      &kp F     &kp Q              &kp MINUS
-    &kp LALT   &kp U                &kp I      &kp A     &kp E      &kp O      &none       &none      &kp S   &kp N   &kp R      &kp T     &kp D              &kp Z
-    &kp LSHFT  &kp LBKT             &kp SEMI   &kp APOS  &kp P      &kp Y      &none       &none      &kp B   &kp M   &kp COMMA  &kp DOT   &kp J              &kp BSLH
-    &mo L5     &kp LS(NON_US_HASH)  &none      &kp LGUI  &kp LCTRL  &none      &mo L1      &kp SPACE  &none   &mo L2  &mo L3     &kp RALT  &kp LC(LA(LS(Q)))  &kp RSHFT
+    &kp TAB    &kp X                &kp V     &kp L     &kp C      &kp W      &none       &none      &kp K   &kp H   &kp G      &kp F     &kp Q              &kp MINUS
+    &kp LALT   &kp U                &kp I     &kp A     &kp E      &kp O      &none       &none      &kp S   &kp N   &kp R      &kp T     &kp D              &kp Z
+    &kp LSHFT  &kp LBKT             &kp SEMI  &kp APOS  &kp P      &kp Y      &none       &none      &kp B   &kp M   &kp COMMA  &kp DOT   &kp J              &kp BSLH
+    &mo L5     &kp LS(NON_US_HASH)  &none     &kp LGUI  &kp LCTRL  &kp LCTRL  &mo L1      &kp SPACE  &none   &mo L2  &mo L3     &kp RALT  &kp LC(LA(LS(Q)))  &kp RSHFT
             >;
         };
 
@@ -81,10 +81,10 @@
 
         fifth_layer {
           bindings = <
-    &kp KP_NUM    &none         &kp LALT      &kp LSHFT     &kp LCTRL     &none         &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
-    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
-    &out OUT_TOG  &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
-    &none    &ext_power EP_TOG  &none         &kp LGUI      &none         &none         &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
+    &kp KP_NUM         &none         &kp LALT      &kp LSHFT     &kp LCTRL     &none         &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
+    &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
+    &ext_power EP_TOG  &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
+    &none              &out OUT_USB  &out OUT_BLE  &kp LGUI      &none         &none         &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
           >;
         };
         
