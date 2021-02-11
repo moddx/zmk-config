@@ -53,7 +53,7 @@
     &kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &none         &none  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp EQUAL
     &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &none         &none  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(EQUAL)
     &kp LSHFT      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &none         &none  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
-    &kp LSHFT      &kp F12     &none       &kp LGUI    &none       &kp LCTRL   &kp LALT      &none  &none       &none       &none       &none       &none       &kp RSHFT
+    &kp LSHFT      &kp F12     &none       &kp LGUI    &kp RALT    &kp LCTRL   &kp LALT      &none  &none       &none       &none       &none       &none       &kp RSHFT
           >;
         };
  
