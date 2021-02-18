@@ -16,6 +16,7 @@
 #define L3 3  // NUMBERs, F1-12..
 #define L4 4  // SPECIAL
 #define L5 5  // NUMPAD
+#define L6 6  // BL
 
 / {
     keymap {
@@ -68,9 +69,18 @@
 
         fifth_layer {
           bindings = <
+    &kp KP_NUM  &none         &kp LALT      &kp LSHFT     &kp LCTRL     &mo L6        &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
+    &none       &none         &none         &none         &none	        &none         &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
+    &none       &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
+    &none       &none         &none         &kp LGUI      &none         &none         &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
+          >;
+        };
+
+        sixth_layer {
+          bindings = <
     &kp KP_NUM         &none         &kp LALT      &kp LSHFT     &kp LCTRL     &none         &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
     &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
-    &ext_power EP_TOG  &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
+    &none              &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
     &none              &out OUT_USB  &out OUT_BLE  &kp LGUI      &none         &none         &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
           >;
         };
