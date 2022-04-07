@@ -5,6 +5,7 @@ name: Build
 jobs:
   build:
     environment: testenv
+    shell: bash
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
