@@ -31,7 +31,7 @@ jobs:
       - name: Inject Secrets
         env: 
           SECRET_EMAIL: ${{ secrets.SECRET_EMAIL }}
-        run: sed -i "s/\/\*SECRET_EMAIL\*\/ &kp E/$SECRET_EMAIL/" config/atreus50.keymap
+        run: sed -i "s/\/\*SECRET_EMAIL\*\/ &kp E/${SECRET_EMAIL}/" config/atreus50.keymap
       - name: West Init
         run: west init -l config
       - name: West Update
