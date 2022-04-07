@@ -5,7 +5,6 @@ name: Build
 jobs:
   build:
     environment: testenv
-    shell: bash
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
@@ -32,6 +31,7 @@ jobs:
       - name: Inject Secrets
         env: 
           EMAIL: ${{ secrets.EMAIL }}
+        shell: bash
         run: sed -i "s/\/\*SECRET_EMAIL\*\/ &kp E/${EMAIL}/" config/atreus50.keymap
       - name: West Init
         run: west init -l config
