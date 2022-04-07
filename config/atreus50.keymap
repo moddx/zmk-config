@@ -18,6 +18,18 @@
 #define L5 5  // NUMPAD
 #define L6 6  // BL
 
+
+/ {
+    macros {
+        email: email {
+            label = "email";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap /*SECRET_EMAIL*/ &kp E >;
+        };
+    };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -42,10 +54,10 @@
         
         snd_layer {
           bindings = <
-    &none      &none          &kp RA(MINUS)    &kp LS(N0)           &kp LS(N6)  &kp RA(RBKT)         &none       &none  &none     &kp LS(F3)  &kp RS(RBKT)  &kp F3       &kp RBKT         &none
+    &none      &email         &kp RA(MINUS)    &kp LS(N0)           &kp LS(N6)  &kp RA(RBKT)         &none       &none  &none     &kp LS(F3)  &kp RS(RBKT)  &kp F3       &kp RBKT         &none
     &kp LCTRL  &kp RA(Q)      &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp SLASH   &kp RA(NON_US_BSLH)  &none       &none  &kp HOME  &kp PG_DN   &kp PG_UP     &kp END      &none            &none
     &kp LSHFT  &kp K_APP      &kp LA(F4)       &kp LS(N7)           &kp LS(N5)  &kp LS(N1)           &none       &none  &none     &none       &none         &kp LS(F10)  &kp LC(F2)       &none
-    &mo L5     &kp LC(PG_UP)  &kp LC(PG_DN)    &kp LGUI             &kp CAPS    &mo L3               &none       &none  &none     &none       &none         &none        &kp LC(LA(DEL))  &kp RSHFT
+    &mo L5     &kp LC(PG_UP)  &kp LC(PG_DN)    &kp LGUI             &caps_word  &mo L3               &none       &none  &none     &none       &none         &none        &kp LC(LA(DEL))  &kp RSHFT
           >;
         };
 
