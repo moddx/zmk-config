@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Inject Secrets
-        run: sed -i 's/\/\*SECRET_EMAIL\*\/ &kp E/${{ env.SECRET_EMAIL }}/' config/atreus50.keymap
+        run: sed -i 's/\/\*SECRET_EMAIL\*\/ &kp E/${{ secrets.SECRET_EMAIL }}/' config/atreus50.keymap
       - name: West Init
         run: west init -l config
       - name: West Update
