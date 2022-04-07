@@ -21,12 +21,11 @@
 
 / {
     macros {
-        email: email {
-            label = "email";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap /*SECRET_EMAIL*/ &kp E >;
-        };
+      ZMK_MACRO(email,
+        wait-ms = <10>;
+        tap-ms = <10>;
+        bindings = <&macro_tap /*SECRET_EMAIL*/ &kp E >;
+      );
     };
 };
 
