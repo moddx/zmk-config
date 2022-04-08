@@ -17,6 +17,7 @@
 #define L4 4  // SPECIAL
 #define L5 5  // NUMPAD
 #define L6 6  // BL
+#define L7 7  // F1-12...
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS RSHFT LSHFT>;
@@ -42,7 +43,7 @@
         default_layer {
             bindings = <
     &kp TAB    &kp X                &kp V     &kp L     &kp C      &kp W      &none       &none      &kp K   &kp H   &kp G      &kp F     &kp Q              &kp MINUS
-    &kp LALT   &kp U                &kp I     &kp A     &lt L5 E   &kp O      &none       &none      &kp S   &kp N   &kp R      &kp T     &kp D              &kp Z
+    &kp LALT   &kp U                &kp I     &lt L7 A  &lt L5 E   &kp O      &none       &none      &kp S   &kp N   &kp R      &kp T     &kp D              &kp Z
     &kp LSHFT  &kp LBKT             &kp SEMI  &kp APOS  &kp P      &kp Y      &none       &none      &kp B   &kp M   &kp COMMA  &kp DOT   &kp J              &kp BSLH
     &none      &kp LS(NON_US_HASH)  &none     &kp LGUI  &kp LCTRL  &kp LCTRL  &mo L1      &kp SPACE  &none   &mo L2  &mo L3     &kp RALT  &kp LC(LA(LS(Q)))  &kp RSHFT
             >;
@@ -84,7 +85,7 @@
           >;
         };
 
-        fifth_layer {
+        num_layer {
           bindings = <
     &kp KP_NUM  &none         &kp LALT      &kp LSHFT     &kp LCTRL     &mo L6        &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
     &kp LALT    &none         &none         &none         &none	        &none         &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
@@ -92,13 +93,22 @@
     &none       &none         &none         &kp LGUI      &none         &kp LCTRL     &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
           >;
         };
-
-        sixth_layer {
+        
+        bt_layer {
           bindings = <
     &kp KP_NUM         &none         &kp LALT      &kp LSHFT     &kp LCTRL     &none         &none         &none   &bt BT_SEL 6  &bt BT_SEL 7  &bt BT_SEL 8  &none   &none      &none
     &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none   &none      &none
     &none              &none         &none         &none         &none         &none         &none         &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none   &none      &none
     &none              &out OUT_USB  &out OUT_BLE  &kp LGUI      &none         &none         &mo L1        &out OUT_USB   &out OUT_BLE     &none         &none         &none   &none      &kp RSHFT
+          >;
+        };
+        
+        f_layer {
+          bindings = <
+    &none       &none         &sk LALT      &sk LSHFT     &sk LCTRL     &mo L6        &none         &none   &none  &kp F7     &kp F8   &kp F9   &kp F10  &none
+    &sk LALT    &none         &none         &none         &none         &none         &none         &none   &none  &kp F4     &kp F5   &kp F6   &kp F11  &none
+    &sk LSHFT   &none         &none         &none         &none         &none         &none         &none   &none  &kp F1     &kp F2   &kp F3   &kp F12  &none
+    &none       &none         &none         &kp LGUI      &none         &sk LCTRL     &mo L1        &none   &none  &none      &none    &none    &none    &none
           >;
         };
         
