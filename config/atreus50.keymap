@@ -34,81 +34,89 @@
             bindings = <&macro_tap /*SECRET_EMAIL*/ &kp E >;
         };
     };
-};
 
-/ {
+    behaviors {
+      parentheses: parentheses {
+          compatible = "zmk,behavior-mod-morph";
+          label = "PARENTHESES";
+          #binding-cells = <0>;
+          bindings = <&kp LS(N8)>, <&kp LS(N9)>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-    &kp TAB    &kp X                &kp V     &kp L     &kp C      &kp W      &none       &none      &kp K   &kp H   &kp G      &kp F     &kp Q              &kp MINUS
-    &kp LALT   &kp U                &kp I     &lt L7 A  &lt L5 E   &kp O      &none       &none      &kp S   &kp N   &kp R      &kp T     &kp D              &kp Z
-    &kp LSHFT  &kp LBKT             &kp SEMI  &kp APOS  &kp P      &kp Y      &none       &none      &kp B   &kp M   &kp COMMA  &kp DOT   &mt RSHFT J       &kp BSLH
-    &none      &kp LS(NON_US_HASH)  &none     &kp LGUI  &kp LCTRL  &kp LCTRL  &mo L1      &kp SPACE  &none   &mo L2  &mo L3     &kp RALT  &kp LC(LA(LS(Q)))  &none
+    &kp TAB   &mt TAB X      &kp V    &kp L    &kp C     &kp W     &none            &none        &kp K   &kp H   &kp G     &kp F    &kp Q             &kp MINUS
+    &kp LALT  &mt LALT U     &kp I    &lt L7 A &lt L5 E  &kp O     &none            &none        &kp S   &kp N   &kp R     &kp T    &kp D             &kp Z
+    &kp LSHFT &mt LSHFT LBKT &kp SEMI &kp APOS &kp P     &kp Y     &none            &none        &kp B   &kp M   &kp COMMA &kp DOT  &mt RSHFT J       &kp BSLH
+    &none     &none          &none    &none    &kp LGUI  &kp LCTRL &mo L1           &lt L2 SPACE &mo L2  &mo L3  &none     &kp RALT &kp LC(LA(LS(Q))) &none
             >;
         };
-
+        
         copy_move_braces_layer {
           bindings = <
-    &kp TAB    &kp ESC     &none       &kp ENTER  &none      &kp INS  &none      &none     &kp C_PREV &kp C_NEXT &kp RA(N7)  &kp RA(N0)  &kp C_PLAY_PAUSE  &none
-    &kp LCTRL  &none       &kp INS     &kp LC(S)  &kp HOME   &kp END  &none      &none     &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &kp LS(N8)        &kp LS(N9)
-    &kp LSHFT  &kp LC(Y)   &kp LC(X)   &kp LC(C)  &kp LC(V)  &tog L4  &none      &none     &kp DEL    &kp BSPC   &kp RA(N8)  &kp RA(N9)  &mt RSHFT BSLH    &none
-    &none      &none       &none       &kp LGUI   &none      &none    &none      &kp LALT  &none      &mo L2     &mo L3      &none       &none             &none
+    &kp TAB    &kp ESC         &none     &kp ENTER  &none      &kp INS  &none           &none    &kp C_PREV &kp C_NEXT &kp RA(N7)  &kp RA(N0)  &kp C_PLAY_PAUSE  &none
+    &kp LCTRL  &none           &kp INS   &kp LC(S)  &kp HOME   &kp END  &none           &none    &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &parentheses      &kp LS(N9)
+    &kp LSHFT  &mt LSHFT LC(Y) &kp LC(X) &kp LC(C)  &kp LC(V)  &tog L4  &none           &none    &kp DEL    &kp BSPC   &kp RA(N8)  &kp RA(N9)  &mt RSHFT BSLH    &none
+    &none      &none           &none     &none      &trans     &none    &none           &kp LALT &mo L2     &mo L3     &none       &none       &none             &none
           >;
         };
         
         special_chars_layer {
           bindings = <
-    &none      &email      &kp RA(MINUS)    &kp LS(N0)           &kp LS(N6)  &kp RA(RBKT)         &none       &none  &none     &kp LS(F3)  &kp RS(RBKT)  &kp F3    &kp RBKT    &none
-    &kp LCTRL  &kp RA(Q)   &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp SLASH   &kp RA(NON_US_BSLH)  &none       &none  &kp HOME  &kp PG_DN   &kp PG_UP     &kp END   &none       &none
-    &kp LSHFT  &kp K_APP   &kp LA(F4)       &kp LS(N7)           &kp LS(N5)  &kp LS(N1)           &none       &none  &none     &none       &none         &none     &mt RSHFT   &none
-    &none      &none       &none            &kp LGUI             &caps_word  &mo L3               &none       &none  &none     &none       &none         &none     &none       &none
+    &none     &email    &kp RA(MINUS)   &kp LS(N0)          &kp LS(N6) &kp RA(RBKT)        &none             &none  &none    &kp LS(F3) &kp RS(RBKT) &kp F3  &kp RBKT   &none
+    &kp LCTRL &kp RA(Q) &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp SLASH  &kp RA(NON_US_BSLH) &none             &none  &kp HOME &kp PG_DN  &kp PG_UP    &kp END &none      &none
+    &kp LSHFT &kp K_APP &kp LA(F4)      &kp LS(N7)          &kp LS(N5) &kp LS(N1)          &none             &none  &none    &none      &none        &none   &mt RSHFT  &none
+    &none     &none     &none           &none               &trans     &caps_word          &mo L3            &none  &none    &none      &none        &none   &none      &none
           >;
         };
 
         only_keep_accents_layer {
           bindings = <
-    &kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &none         &none  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp EQUAL
-    &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &none         &none  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(EQUAL)
-    &kp LSHFT      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &none         &none  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
-    &kp LSHFT      &kp F12     &none       &kp LGUI    &kp RALT    &kp LCTRL   &kp LALT      &none  &none       &none       &none       &none       &none       &kp RSHFT
+    &kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &none              &none  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp EQUAL
+    &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &none              &none  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(EQUAL)
+    &kp LSHFT      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &none              &none  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
+    &kp LSHFT      &kp F12     &none       &kp LGUI    &kp RALT    &kp LCTRL   &kp LALT           &none  &none       &none       &none       &none       &none       &kp RSHFT
           >;
         };
  
         system_layer {
           bindings = <
-    &kp TAB    &kp PG_UP  &none      &kp UP     &none      &kp DEL   &none         &none      &none   &none   &none  &kp SCROLLLOCK  &kp PSCRN  &none
-    &kp LCTRL  &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC  &none         &none      &none   &none   &none  &none           &none      &none
-    &kp LSHFT  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &tog L4   &none         &none      &none   &none   &none  &none           &none      &none
-    &none      &kp ENTER  &none      &kp LGUI   &kp LCTRL  &kp LALT  &mo L1        &kp SPACE  &none   &mo L2  &mo L3 &none           &reset     &bootloader
+    &kp TAB    &kp PG_UP  &none      &kp UP     &none      &kp DEL   &none             &none      &none   &none   &none  &kp SCROLLLOCK  &kp PSCRN  &none
+    &kp LCTRL  &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC  &none             &none      &none   &none   &none  &none           &none      &none
+    &kp LSHFT  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &tog L4   &none             &none      &none   &none   &none  &none           &none      &none
+    &none      &kp ENTER  &none      &kp LGUI   &kp LCTRL  &kp LALT  &mo L1            &kp SPACE  &none   &mo L2  &mo L3 &none           &reset     &bootloader
           >;
         };
 
         num_layer {
           bindings = <
-    &kp KP_NUM  &none         &kp LALT      &kp LSHFT     &kp LCTRL     &mo L6        &none         &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
-    &kp LALT    &none         &none         &none         &none	        &none         &none         &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
-    &kp LSHFT   &none         &none         &none         &none         &none         &none         &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
-    &none       &none         &none         &kp LGUI      &none         &kp LCTRL     &mo L1        &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
+    &kp KP_NUM  &none         &kp LALT      &kp LSHFT     &kp LCTRL     &sl L6        &none             &none   &kp RS(N7)    &kp N7     &kp N8   &kp N9   &kp SLASH  &kp BSPC
+    &kp LALT    &none         &none         &none         &none	        &none         &none             &none   &kp LS(RBKT)  &kp N4     &kp N5   &kp N6   &kp RBKT   &none
+    &kp LSHFT   &none         &none         &none         &none         &none         &none             &none   &kp BSPC      &kp N1     &kp N2   &kp N3   &none      &none
+    &none       &none         &none         &kp LGUI      &none         &kp LCTRL     &mo L1            &kp N0  &kp DOT       &kp COMMA  &kp DOT  &kp DOT  &none      &kp RSHFT
           >;
         };
         
         bt_layer {
           bindings = <
-    &kp KP_NUM         &none         &kp LALT      &kp LSHFT     &kp LCTRL     &none         &none         &none   &bt BT_SEL 6  &bt BT_SEL 7  &bt BT_SEL 8  &none   &none      &none
-    &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none   &none      &none
-    &none              &none         &none         &none         &none         &none         &none         &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none   &none      &none
-    &none              &out OUT_USB  &out OUT_BLE  &kp LGUI      &none         &none         &mo L1        &out OUT_USB   &out OUT_BLE     &none         &none         &none   &none      &kp RSHFT
+    &none      &none        &none        &none        &none        &none        &none             &none   &bt BT_SEL 6  &bt BT_SEL 7  &bt BT_SEL 8  &none   &none      &none
+    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none             &none   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none   &none      &none
+    &none      &none        &none        &none        &none        &none        &none             &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none   &none      &none
+    &none      &none        &none        &none        &none        &none        &none             &out OUT_USB   &out OUT_BLE  &none  &none         &none   &none      &none
           >;
         };
         
         f_keys_layer {
           bindings = <
-    &none       &none         &sk LALT      &sk LSHFT     &sk LCTRL     &mo L6        &none         &none   &none  &kp F7     &kp F8   &kp F9   &kp F10  &none
-    &sk LALT    &none         &none         &none         &none         &none         &none         &none   &none  &kp F4     &kp F5   &kp F6   &kp F11  &none
-    &sk LSHFT   &none         &none         &none         &none         &none         &none         &none   &none  &kp F1     &kp F2   &kp F3   &kp F12  &none
-    &none       &none         &none         &kp LGUI      &none         &sk LCTRL     &mo L1        &none   &none  &none      &none    &none    &none    &none
+    &none      &none        &sk LALT     &sk LSHFT    &sk LCTRL    &mo L6       &none             &none   &none  &kp F7     &kp F8   &kp F9   &kp F10  &none
+    &sk LALT   &none        &none        &none        &none        &none        &none             &none   &none  &kp F4     &kp F5   &kp F6   &kp F11  &none
+    &sk LSHFT  &none        &none        &none        &none        &none        &none             &none   &none  &kp F1     &kp F2   &kp F3   &kp F12  &none
+    &none      &none        &none        &kp LGUI     &none        &sk LCTRL    &mo L1            &none   &none  &none      &none    &none    &none    &none
           >;
         };
         
