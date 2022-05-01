@@ -18,6 +18,7 @@
 #define L5 5  // NUMPAD
 #define L6 6  // BL
 #define L7 7  // F1-12...
+#define L8 8  // SYM
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS MOD_LSFT MOD_RSFT>;
@@ -28,8 +29,8 @@
         email: email {
             label = "email";
             compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
             #binding-cells = <0>;
             bindings = <&macro_tap /*SECRET_EMAIL*/ &kp E >;
         };
@@ -85,30 +86,30 @@
     // DEFAULT
         default_layer {
             bindings = <
-    &none &kp X          &kp V    &kp L    &kp C     &kp W     &none            &none        &kp K   &kp H   &kp G     &kp F    &kp Q             &kp MINUS
-    &none &hm LALT U     &kp I    &lt L7 A &lt L5 E  &kp O     &none            &none        &kp S   &kp N   &kp R     &t_tab   &hm LALT D        &kp Z
-    &none &hm LSHFT LBKT &kp SEMI &kp APOS &kp P     &kp Y     &none            &none        &kp B   &kp M   &kp COMMA &kp DOT  &hm RSHFT J       &kp BSLH
-    &none &none          &none    &none    &kp LGUI  &kp LCTRL &mo L1           &lt L2 SPACE &mo L2  &mo L3  &none     &kp RALT &kp LC(LA(LS(Q))) &none
+    &none &kp X       &kp V    &kp L    &kp C     &kp W     &none            &none        &kp K   &kp H   &kp G     &kp F    &kp Q             &none
+    &none &hm LALT U  &lt L8 I &lt L7 A &lt L5 E  &kp O     &none            &none        &kp S   &kp N   &kp R     &t_tab   &hm LALT D        &none
+    &none &hm LSHFT Z &none    &none    &kp P     &kp Y     &none            &none        &kp B   &kp M   &kp COMMA &kp DOT  &hm RSHFT J       &none
+    &none &none       &none    &none    &kp LGUI  &kp LCTRL &mo L1           &lt L2 SPACE &mo L2  &mo L3  &none     &kp RALT &kp LC(LA(LS(Q))) &none
             >;
         };
 
     // L1    
         copy_move_braces_layer {
           bindings = <
-    &none &kp ESC         &none     &kp ENTER  &none      &kp INS  &none           &none    &kp C_PREV &kp C_NEXT &kp RA(N7)  &kp RA(N0)  &kp C_PLAY_PAUSE  &none
-    &none &kp LCTRL       &kp INS   &kp LC(S)  &kp HOME   &kp END  &none           &none    &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &parentheses      &none
-    &none &hm LSHFT LC(Y) &kp LC(X) &kp LC(C)  &kp LC(V)  &tog L4  &none           &none    &kp DEL    &kp BSPC   &kp RA(N8)  &kp RA(N9)  &hm RSHFT BSLH    &none
-    &none &none           &none     &none      &trans     &none    &none           &kp LALT &mo L2     &mo L3     &none       &none       &none             &none
+    &none &kp ESC         &none     &kp ENTER  &none      &kp INS  &none           &none    &none    &kp BSLH &kp RA(N7) &kp RA(N0) &kp C_PLAY_PAUSE &none
+    &none &kp LCTRL       &kp INS   &kp LC(S)  &kp HOME   &kp END  &none           &none    &kp LEFT &kp DOWN &kp UP     &kp RIGHT  &parentheses     &none
+    &none &hm LSHFT LC(Y) &kp LC(X) &kp LC(C)  &kp LC(V)  &tog L4  &none           &none    &kp DEL  &kp BSPC &kp RA(N8) &kp RA(N9) &hm RSHFT BSLH   &none
+    &none &none           &none     &none      &trans     &none    &none           &kp LALT &mo L2   &mo L3   &none      &none      &none            &none
           >;
         };
     
     // L2
         special_chars_layer {
           bindings = <
-    &none &email          &kp RA(MINUS)   &kp LS(N0)          &kp LS(N6) &kp RA(RBKT)        &none             &none  &none    &kp LS(F3) &kp RS(RBKT) &kp F3  &kp RBKT   &none
-    &none &hm LCTRL RA(Q) &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp SLASH  &kp RA(NON_US_BSLH) &none             &none  &kp HOME &kp PG_DN  &kp PG_UP    &kp END &none      &none
-    &none &hm LSHFT K_APP &kp LA(F4)      &kp LS(N7)          &kp LS(N5) &kp LS(N1)          &none             &none  &none    &none      &none        &none   &kp RSHFT  &none
-    &none &none           &none           &none               &trans     &caps_word          &mo L3            &none  &none    &none      &none        &none   &none      &none
+    &none &email          &kp RA(MINUS)   &kp LS(N0)          &kp LS(N6) &kp RA(RBKT)        &none             &none  &none     &kp LS(F3) &kp RS(RBKT) &kp F3   &kp RBKT  &none
+    &none &hm LCTRL RA(Q) &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp SLASH  &kp RA(NON_US_BSLH) &none             &none  &kp HOME  &kp PG_DN  &kp PG_UP    &kp END  &none     &none
+    &none &hm LSHFT K_APP &kp LA(F4)      &kp LS(N7)          &kp LS(N5) &kp LS(N1)          &none             &none  &kp MINUS &kp LBKT   &kp SEMI     &kp APOS &kp RSHFT &none
+    &none &none           &none           &none               &trans     &caps_word          &mo L3            &none  &none     &none      &none        &none    &none     &none
           >;
         };
 
@@ -162,5 +163,14 @@
           >;
         };
         
+    // L8, numpad and special chars 
+        sym_layer {
+          bindings = <
+    &none &kp KP_NUM &none     &none     &none     &sl L6    &none             &none  &kp RS(N7)   &kp LS(N7) &kp LS(N8) &kp LS(N9) &none &none
+    &none &sk LALT   &sk LSHFT &sk LCTRL &none	   &none     &none             &none  &kp LS(RBKT) &kp LS(N4) &kp LS(N5) &kp LS(N6) &none &none
+    &none &sk LSHFT  &none     &none     &none     &none     &none             &none  &kp BSPC     &kp LS(N1) &kp LS(N2) &kp LS(N3) &none &none
+    &none &none      &none     &none     &sk LGUI  &sk LCTRL &mo L1            &kp N0 &dot_comma   &kp COMMA  &none      &none      &none &none
+          >;
+        };
     };
 };
