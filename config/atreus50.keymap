@@ -86,10 +86,10 @@
     // DEFAULT
         default_layer {
             bindings = <
-    &none &kp X       &kp V    &kp L    &kp C     &kp W     &none            &none        &kp K   &kp H   &kp G     &kp F    &kp Q             &none
-    &none &hm LALT U  &lt L8 I &lt L7 A &lt L5 E  &kp O     &none            &none        &kp S   &kp N   &kp R     &t_tab   &hm LALT D        &none
-    &none &hm LSHFT Z &none    &none    &kp P     &kp Y     &none            &none        &kp B   &kp M   &kp COMMA &kp DOT  &hm RSHFT J       &none
-    &none &none       &none    &none    &kp LGUI  &kp LCTRL &mo L1           &lt L2 SPACE &mo L2  &mo L3  &none     &kp RALT &kp LC(LA(LS(Q))) &none
+    &bt BT_CLR   &kp X       &kp V    &kp L    &kp C     &kp W     &none            &none        &kp K   &kp H   &kp G     &kp F    &kp Q             &none
+    &bt BT_SEL 0 &hm LALT U  &lt L8 I &lt L7 A &lt L5 E  &kp O     &none            &none        &kp S   &kp N   &kp R     &t_tab   &hm LALT D        &none
+    &out OUT_USB &hm LSHFT Z &none    &none    &kp P     &kp Y     &none            &none        &kp B   &kp M   &kp COMMA &kp DOT  &hm RSHFT J       &none
+    &out OUT_BLE &none       &none    &none    &kp LGUI  &kp LCTRL &mo L1           &lt L2 SPACE &mo L2  &mo L3  &none     &kp RALT &kp LC(LA(LS(Q))) &none
             >;
         };
 
